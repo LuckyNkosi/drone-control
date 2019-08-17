@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.2.0/socket.io.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js"></script>
+</head>
+<body>
+
+        <h1>BBD ESC@PE 2019 Drone Hack</h1>
+
+        <h2 id="x">X: </h2>
+        <h2 id="y">Y: </h2>
+        <h2 id="z">Z: </h2>
+        <h2 id="status">Command: </h2>
+        <div>
+
+            <button class="btn" type="button" onclick="SendSensorDate('up')"><span>UP</span></button>
+            <div style="display: flex">            
+                <button class="btn orange" type="button" onclick="SendSensorDate('spinLeft')"><span>LEFT</span></button>
+                <button> DRONE Commands</button>
+                <button class="btn red" type="button" onclick="SendSensorDate('spinRight')"><span>RIGHT</span></button>
+            </div>
+            
+            <button class="btn" type="button" onclick="SendSensorDate('down')"><span>DOWN</span></button>
+        </div>
+
+    <!-- <h1>Test Page</h1>
+    <h3>Accelerometer</h3>
+    <div id='status'></div>     -->
+    <div style="display: flex">
+        <button class="btn" type="button" onclick="SendSensorDate('straightUp')"><span>TAKE OFF! </span> </button>
+        <button class="btn red" type="button" onclick="SendSensorDate('origin')"><span> LAND! </span></button>
+    </div>
+    <button class="btn orange" type="button" onclick="TestDrone()"><span> Test Drone! </span></button>
+</body>
